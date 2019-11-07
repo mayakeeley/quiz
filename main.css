@@ -1,0 +1,91 @@
+*{
+  box-sizing: border-box;
+  font-family: 'IM Fell English SC', serif;
+  text-align: center;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url(./images/piratebackground1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  font-size: 60px;
+  top: 40%;
+  position: relative;
+}
+
+section, header{
+  height: 70vh;
+  margin: 15vh;
+  
+}
+
+header, section, #results{
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#results{
+  position: relative;
+  margin: 15vh;
+}
+
+div{
+  font-size: 24px;
+  position: relative;
+  top: 20%;
+  padding: 2vw;
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 24px;
+  margin: 20px;
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+#submit{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#submit:hover, button:hover{
+  background-color: white;
+}
+
+label {
+  display: block;
+}
+
+.next {
+  position: relative;
+  top: 50vh;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid black;
+  color: black;
+  padding: 10px 20px;
+}
+
+.next:active{
+  color: black;
+}
+
+.next:hover{
+  background-color: white;
+}
+
+.hidden {
+  opacity: 0;
+}
