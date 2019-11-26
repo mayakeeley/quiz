@@ -7,10 +7,10 @@ const myQuestions = [
     answers: {
       a: "1",
       b: "2",
-      c: "4",
+      c: "4"
     },
-    correctAnswer : "c"
-  }, 
+    correctAnswer: "c"
+  },
   {
     question: "What is Clara's gang name?",
     answers: {
@@ -26,9 +26,9 @@ const myQuestions = [
       a: "The Boss",
       b: "Mr Bossman",
       c: "Liam Bossman",
-      d: "Bossman Liam",
+      d: "Bossman Liam"
     },
-    correctAnswer: "d",
+    correctAnswer: "d"
   }
 ];
 
@@ -47,7 +47,7 @@ function buildQuiz() {
         </label>`
       );
     }
-    if(nextQuestion < myQuestions.length) {
+    if (nextQuestion < myQuestions.length) {
       output.push(
         `<section id="no${questionNumber}">
         <div class="question">${currentQuestion.question}</div>
@@ -57,27 +57,30 @@ function buildQuiz() {
       );
     } else {
       output.push(
-      `<section id="no${questionNumber}">
+        `<section id="no${questionNumber}">
       <div class="question">${currentQuestion.question}</div>
       <div class="answers">${answers.join("")}</div>
-      </section>` 
-      )     
+      </section>`
+      );
     }
-
-    }
-  );
-  quizContainer.innerHTML = output.join("");
-};
-
-function showResults(){
-  const answerContainers = quizContainer.querySelectorAll('.answers');
-  let numCorrect = 0;
-  myQuestions.forEach( (currentQuestion, questionNumber) => {
-    const answerContainer = answerContainers[questionNumber];
-    const selector = 'input[name=question' + questionNumber + ']:checked';
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
   });
-  resultsContainer.innerHTML = 'Congratulations! You got ' + numCorrect + ' out of ' + myQuestions.length;
+  quizContainer.innerHTML = output.join("");
+}
+
+function showResults() {
+  const answerContainers = quizContainer.querySelectorAll(".answers");
+  let numCorrect = 0;
+  myQuestions.forEach((currentQuestion, questionNumber) => {
+    const answerContainer = answerContainers[questionNumber];
+    const selector = "input[name=question" + questionNumber + "]:checked";
+    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+    if (userAnswer === currentQuestion.correctAnswer) {
+      numCorrect++;
+    }
+  });
+  resultsContainer.innerHTML =
+    "Congratulations! You got " + numCorrect + " out of " + myQuestions.length;
 }
 
 buildQuiz();
