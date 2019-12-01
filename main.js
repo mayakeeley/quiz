@@ -52,8 +52,8 @@ function buildQuiz() {
         `<section id="no${questionNumber}">
         <div class="question">${currentQuestion.question}</div>
         <div class="answers">${answers.join("")}</div>
-        <a class="next" href="#no${nextQuestion}">Next Question</a>
-        </section>`
+        </section>
+        <a class="next" href="#no${nextQuestion}">Next Question</a>`
       );
     } else {
       output.push(

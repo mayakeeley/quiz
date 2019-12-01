@@ -1,15 +1,15 @@
-*{
+* {
   box-sizing: border-box;
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   text-align: center;
   margin: 0;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   background-image: url(./images/piratebackground1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,37 +18,39 @@ body{
   width: 100%;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 60px;
   top: 40%;
   position: relative;
 }
 
-section, header{
+section,
+header {
   height: 70vh;
   margin: 15vh;
-  
 }
 
-header, section, #results{
+header,
+section,
+#results {
   border: 2px solid black;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-#results{
+#results {
   position: relative;
   margin: 15vh;
 }
 
-div{
+div {
   font-size: 24px;
   position: relative;
   top: 20%;
-  padding: 2vw;
+  padding: 1vw 1vw 0 1vw;
 }
 
-button{
+button {
   padding: 10px 20px;
   font-size: 24px;
   margin: 20px;
@@ -56,11 +58,12 @@ button{
   background-color: transparent;
 }
 
-#submit{
+#submit {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-#submit:hover, button:hover{
+#submit:hover,
+button:hover {
   background-color: white;
 }
 
@@ -69,8 +72,7 @@ label {
 }
 
 .next {
-  position: relative;
-  top: 50vh;
+  margin: auto;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid black;
@@ -78,14 +80,48 @@ label {
   padding: 10px 20px;
 }
 
-.next:active{
+.next:active {
   color: black;
 }
 
-.next:hover{
+.next:hover {
   background-color: white;
 }
 
 .hidden {
   opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  header,
+  section {
+    height: 30vh;
+    margin: 10vh;
+  }
+
+  #results {
+    margin: 10vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  div {
+    font-size: 20px;
+  }
+  .next {
+    font-size: 0.8em;
+  }
+  #submit {
+    font-size: 1em;
+  }
 }
